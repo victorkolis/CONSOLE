@@ -14,7 +14,7 @@ class Game:
 		self.max = 20
 		self.random_number = str(random.randint(self.min, self.max))
 	
-	def sleep(self, x=0):
+	def sleep(self, x=2):
 		time.sleep(x)
 	
 	def clear(self):
@@ -58,12 +58,13 @@ class Game:
 			self.chances -= 1
 			
 		if self.chances == 0:
-			self.game_over()
+			return self.game_over()
+		
 		
 	def restart(self):
 		self.three_liner()
 		print(Color.cyan, 'Play again? (y/n)', end='')
-		return input(': ')
+		return input(': ').lower()
 	
 	def game_over(self):
 		self.clear()
@@ -81,6 +82,7 @@ class Game:
 		if self.restart() == 'n':
 			self.clear()
 			self.goodbye()
+			return True
 			
 
 		else:
@@ -90,8 +92,10 @@ class Game:
 			self.random_number = str(random.randint(self.min, self.max))
 			self.chances = 5
 
+	
 	def goodbye(self):
 		for letter in 'SEE YOU LATER THEN':
 			print(letter)
 			self.sleep(0.2)
+		self.sleep()
 		self.clear()
