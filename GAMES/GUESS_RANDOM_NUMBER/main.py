@@ -1,7 +1,7 @@
 ###############################
 # Author : Code Future Invent #
-# Version: 1.0.0				  #
-# Date	 : Mar-19-2020		  #
+# Version: 1.0.0              #
+# Date	 : Mar-19-2020	      #
 ###############################
 
 #!/usr/bin/env python3
