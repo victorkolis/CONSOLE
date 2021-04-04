@@ -8,6 +8,12 @@ import time
 def clear():
 	os.system('clear')
 
+
+def sleeper():
+	time.sleep(4)
+
+
+clear()
 # Getting the current time and date of birth
 whole_time = time.gmtime()
 
@@ -24,5 +30,9 @@ my_current_age = current_year - year_of_birth
 if month_of_birth > current_month:
 	my_current_age -= 1
 	print(f'You are {my_current_age} years old.')
+	sleeper()
+	clear()
 else:
 	print(f'You are {my_current_age} years old.')
+	sleeper()
+	clear()
