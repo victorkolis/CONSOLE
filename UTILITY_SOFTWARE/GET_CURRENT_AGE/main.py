@@ -5,6 +5,8 @@
 import os
 import time
 
+
+# Assets
 def clear():
 	os.system('clear')
 
@@ -14,6 +16,7 @@ def sleeper():
 
 
 clear()
+
 # Getting the current time and date of birth
 whole_time = time.gmtime()
 
@@ -25,7 +28,6 @@ month_of_birth = int(input('Enter month of birth: '))
 clear()
 
 my_current_age = current_year - year_of_birth
-
 
 if month_of_birth > current_month:
 	my_current_age -= 1
